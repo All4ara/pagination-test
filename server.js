@@ -18,8 +18,8 @@ function nameToInt(str) {
 // GET
 app.get('/apps', (req,res) => {
     const by = req.query.by;
-    const start = req.query.start;
-    const end = req.query.end;
+    let start = req.query.start;
+    let end = req.query.end;
     const max = req.query.max;
     const order = req.query.order;
 
@@ -27,7 +27,11 @@ app.get('/apps', (req,res) => {
 
     // When range is passed, "by" is required
     if(!by) {
-        res.status(400).send(`When Range Param Passed, "By" must be specified`)
+        let newResult = result;
+        start = 5
+        end = 20
+        res.status(200).send(result.slice(start - 1, end))
+        //`When Range Param Passed, "By" must be specified`)
     // Range => Sort by ID
     } else if (by === "id") {
         let newResult = result
