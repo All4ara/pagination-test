@@ -31,8 +31,8 @@ app.get('/apps', (req,res) => {
             res.status(400).send(`When Range Param Passed, "By" must be specified`)
         } else {
             start = 5
-        end = 20
-        res.status(200).send(result.slice(start - 1, end))
+            end = 20
+            res.status(200).send(result.slice(start - 1, end))
         }
         
         
