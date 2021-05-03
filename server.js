@@ -3,7 +3,7 @@ const app = express();
 
 // Seed Data Apps 1 - 50
 const apps = []
-for (let i = 1; i < 50; i++) {
+for (let i = 1; i < 51; i++) {
     apps.push({
         id: i,
         name: `my-app-${i}`
