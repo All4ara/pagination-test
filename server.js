@@ -74,6 +74,6 @@ app.get('/apps', (req,res) => {
     // Base Case Default Return
     res.json(result)
 })
-
+const PORT = process.env.PORT || 3005
 // Load Server
-app.listen(3000)
+app.listen(PORT)
